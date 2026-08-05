@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
@@ -529,18 +530,28 @@ const DownMuViPage = () => {
                 Repositorios y desarrollo
               </h2>
               <p className="mt-3 text-muted-foreground">
-                Código abierto de desarrollo y repositorio público de
-                instaladores.
+                Instaladores públicos y código fuente privado de SysJoL
+                Development.
               </p>
             </div>
             <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2">
               <div className="flex flex-col gap-4 rounded-2xl border border-white/5 bg-card/40 p-6 backdrop-blur-sm">
-                <BookOpen className="h-10 w-10 shrink-0 text-downmuvi-violet" />
+                <div className="flex items-center justify-between gap-2">
+                  <BookOpen className="h-10 w-10 shrink-0 text-downmuvi-violet" />
+                  <Badge
+                    variant="secondary"
+                    className="bg-downmuvi-violet/15 text-downmuvi-violet text-[10px] font-bold uppercase tracking-wider"
+                  >
+                    Privado
+                  </Badge>
+                </div>
                 <h3 className="font-display text-xl font-bold">
                   Repositorio de código fuente (desarrollo)
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  El proyecto de desarrollo activo de DownMuVi.
+                  Repositorio privado de SysJoL Development. El acceso al
+                  código se concede únicamente para colaboración autorizada;
+                  los visitantes públicos no pueden clonarlo.
                 </p>
                 <a
                   href={DOWNMUVI_REPO_URL}
@@ -552,12 +563,21 @@ const DownMuViPage = () => {
                 </a>
               </div>
               <div className="flex flex-col gap-4 rounded-2xl border border-white/5 bg-card/40 p-6 backdrop-blur-sm">
-                <Download className="h-10 w-10 shrink-0 text-downmuvi-cyan" />
+                <div className="flex items-center justify-between gap-2">
+                  <Download className="h-10 w-10 shrink-0 text-downmuvi-cyan" />
+                  <Badge
+                    variant="secondary"
+                    className="bg-downmuvi-cyan/15 text-downmuvi-cyan text-[10px] font-bold uppercase tracking-wider"
+                  >
+                    Público
+                  </Badge>
+                </div>
                 <h3 className="font-display text-xl font-bold">
                   Repositorio de releases (instaladores)
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Instaladores publicados y actualizaciones automáticas.
+                  Instaladores publicados, página de releases y actualizaciones
+                  automáticas accesibles para todos.
                 </p>
                 <a
                   href={DOWNMUVI_RELEASES_REPO_URL}
@@ -583,6 +603,22 @@ const DownMuViPage = () => {
                     proyecto; no se incluye por su tamaño &gt;200 MB).
                   </p>
                 </div>
+              </div>
+              <div className="mt-4 flex gap-3 rounded-xl border border-downmuvi-violet/20 bg-downmuvi-violet/5 p-4 text-sm text-muted-foreground">
+                <Lock className="h-5 w-5 shrink-0 text-downmuvi-violet" />
+                <p>
+                  El repositorio de código fuente es{" "}
+                  <strong className="font-semibold text-foreground">
+                    privado
+                  </strong>
+                  : los pasos de configuración solo funcionan si SysJoL te
+                  concedió acceso al repositorio. Sin acceso, la descarga
+                  pública disponible es el instalador{" "}
+                  <code className="rounded bg-muted px-1 py-0.5 text-xs">
+                    {DOWNMUVI_ASSET_NAME}
+                  </code>{" "}
+                  desde GitHub Releases.
+                </p>
               </div>
               <div className="mt-6 grid gap-3 md:grid-cols-2">
                 <div className="rounded-xl border border-white/5 bg-background/60 p-4">
@@ -705,12 +741,12 @@ const DownMuViPage = () => {
                 Versión v{DOWNMUVI_VERSION} · Publicado el {DOWNMUVI_RELEASE_DATE}
               </p>
               <a
-                href={DOWNMUVI_REPO_URL}
+                href={DOWNMUVI_RELEASES_REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block text-sm text-downmuvi-cyan underline-offset-4 hover:underline"
               >
-                Repositorio en GitHub
+                Releases en GitHub
               </a>
             </div>
             <Button asChild variant="hero" className="bg-downmuvi-cyan">
