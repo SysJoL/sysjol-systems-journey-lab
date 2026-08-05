@@ -463,13 +463,13 @@ const DownMuViPage = () => {
                     Enlace directo de descarga — siempre apunta a la última
                     versión publicada en GitHub Releases.
                   </p>
-                  <code className="mt-4 inline-block max-w-full truncate rounded bg-muted px-3 py-1.5 text-xs text-downmuvi-cyan">
+                  <code className="mt-4 inline-block max-w-full break-all whitespace-normal rounded bg-muted px-3 py-1.5 text-xs text-downmuvi-cyan">
                     {DOWNMUVI_DOWNLOAD_URL}
                   </code>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-downmuvi-cyan font-semibold text-background shadow-lg shadow-downmuvi-cyan/25 hover:bg-downmuvi-cyan/90"
+                  className="h-auto max-w-full whitespace-normal bg-downmuvi-cyan py-3 text-center font-semibold text-background shadow-lg shadow-downmuvi-cyan/25 hover:bg-downmuvi-cyan/90"
                   asChild
                 >
                   <a
@@ -478,8 +478,11 @@ const DownMuViPage = () => {
                     rel="noopener noreferrer"
                     aria-label="Descargar DownMuVi para Windows"
                   >
-                    <Download className="mr-2 h-5 w-5" />
-                    Descargar {DOWNMUVI_ASSET_NAME}
+                    <Download className="mr-2 h-5 w-5 shrink-0" />
+                    <span className="sm:hidden">Descargar</span>
+                    <span className="hidden sm:inline">
+                      Descargar {DOWNMUVI_ASSET_NAME}
+                    </span>
                   </a>
                 </Button>
               </div>
@@ -557,7 +560,7 @@ const DownMuViPage = () => {
                   href={DOWNMUVI_REPO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto truncate text-sm text-downmuvi-cyan underline-offset-4 hover:underline"
+                  className="mt-auto break-all text-sm text-downmuvi-cyan underline-offset-4 hover:underline"
                 >
                   {DOWNMUVI_REPO_URL}
                 </a>
@@ -583,7 +586,7 @@ const DownMuViPage = () => {
                   href={DOWNMUVI_RELEASES_REPO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto truncate text-sm text-downmuvi-cyan underline-offset-4 hover:underline"
+                  className="mt-auto break-all text-sm text-downmuvi-cyan underline-offset-4 hover:underline"
                 >
                   {DOWNMUVI_RELEASES_REPO_URL}
                 </a>
@@ -625,7 +628,7 @@ const DownMuViPage = () => {
                   <p className="mb-2 text-xs font-bold uppercase tracking-widest text-downmuvi-cyan">
                     Configuración
                   </p>
-                  <code className="block overflow-x-auto whitespace-pre text-xs text-muted-foreground">
+                  <code className="block whitespace-pre-wrap break-all text-xs text-muted-foreground">
                     git clone https://github.com/SysJoL-Development/DownMuVi.git
                     {"\n"}cd DownMuVi
                     {"\n"}pip install -r requirements.txt
@@ -636,7 +639,7 @@ const DownMuViPage = () => {
                   <p className="mb-2 text-xs font-bold uppercase tracking-widest text-downmuvi-violet">
                     Construcción del ejecutable
                   </p>
-                  <code className="block overflow-x-auto whitespace-pre text-xs text-muted-foreground">
+                  <code className="block whitespace-pre-wrap break-all text-xs text-muted-foreground">
                     python build.py
                     {"\n"}# Instalador: script de Inno Setup
                     {"\n"}# installer_setup.iss
