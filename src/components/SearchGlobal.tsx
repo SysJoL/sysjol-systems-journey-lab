@@ -13,6 +13,7 @@ import {
   Globe,
   Compass,
   Monitor,
+  QrCode,
 } from "lucide-react";
 import {
   FaTiktok,
@@ -102,6 +103,13 @@ const ExploreContent = ({ onSelect }: { onSelect: (href: string) => void }) => (
             color: "text-red-400",
           },
           {
+            title: "Generador QR",
+            desc: "Crea QR desde un enlace",
+            icon: QrCode,
+            href: "/qr-generator",
+            color: "text-violet-400",
+          },
+          {
             title: "Cursos Premium",
             desc: "Aprende con expertos",
             icon: BookOpen,
@@ -143,6 +151,7 @@ const ExploreContent = ({ onSelect }: { onSelect: (href: string) => void }) => (
         {[
           { name: "DownMuVi", href: "/downmuvi" },
           { name: "CapturaApp", href: "/capturaapp" },
+          { name: "Generador QR", href: "/qr-generator" },
           { name: "Sistemas", href: "/systems" },
           { name: "Estrategia", href: "/journey" },
           { name: "Laboratorio", href: "/lab" },

@@ -12,6 +12,7 @@ import {
   Search,
   Video,
   Clapperboard,
+  QrCode,
 } from "lucide-react";
 import { SearchGlobal } from "./SearchGlobal";
 import { useSearchState } from "@/hooks/use-search";
@@ -183,6 +184,19 @@ const Navbar = () => {
 
                 <NavigationMenuItem>
                   <Link
+                    to="/qr-generator"
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "bg-transparent hover:bg-white/5 transition-colors flex items-center gap-2",
+                    )}
+                  >
+                    <QrCode className="w-4 h-4 text-downmuvi-violet" />
+                    Generador QR
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link
                     to="/courses"
                     className={cn(
                       navigationMenuTriggerStyle(),
@@ -310,6 +324,24 @@ const Navbar = () => {
                             </p>
                             <p className="text-xs text-muted-foreground">
                               Hub multimedia con IA local
+                            </p>
+                          </div>
+                        </Link>
+
+                        <Link
+                          to="/qr-generator"
+                          className="flex items-center gap-4 px-3 py-4 rounded-xl hover:bg-white/5 transition-colors group"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className="p-2 rounded-lg bg-downmuvi-violet/10 group-hover:bg-downmuvi-violet/20 transition-colors">
+                            <QrCode className="w-5 h-5 text-downmuvi-violet" />
+                          </div>
+                          <div>
+                            <p className="font-bold text-sm text-foreground">
+                              Generador QR
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              Crea QR desde un enlace
                             </p>
                           </div>
                         </Link>

@@ -198,6 +198,7 @@ const Footer = () => {
               {[
                 { name: "DownMuVi", href: "/downmuvi" },
                 { name: "CapturaApp", href: "/capturaapp" },
+                { name: "Generador QR", href: "/qr-generator" },
                 { name: "Sistemas", href: "/systems" },
                 { name: "Estrategia", href: "/journey" },
                 { name: "Laboratorio", href: "/lab" },
@@ -259,6 +260,7 @@ const Footer = () => {
                     {[
                       { name: "DownMuVi", href: "/downmuvi" },
                       { name: "CapturaApp", href: "/capturaapp" },
+                      { name: "Generador QR", href: "/qr-generator" },
                       { name: "Sistemas", href: "/systems" },
                       { name: "Estrategia", href: "/journey" },
                       { name: "Laboratorio", href: "/lab" },

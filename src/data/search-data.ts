@@ -96,6 +96,19 @@ export const searchData: SearchItem[] = [
       "sysjol pro premium zip play all ffmpeg incluido 394.9 mb 414116930 releases latest " +
       "github.com/SysJoL/DownMuVi-Releases github.com/SysJoL-Development/DownMuVi",
   },
+  {
+    title: "Generador QR",
+    description:
+      "Herramienta gratuita para crear códigos QR a partir de un enlace: 100% local, sin registro y sin subir datos.",
+    category: "Producto",
+    href: "/qr-generator",
+    keywords:
+      "qr código codigo barcode código qr codigo qr generar generador creador generador de qr " +
+      "link enlace url dirección direccion web página pagina gratis gratuito free " +
+      "png svg descargar descarga imprimir escanear scan scannear móvil movil celular telefono " +
+      "privado privacidad local navegador browser sin registro sin correo sin cuenta sin subir datos " +
+      "sysjol herramienta tool utilidad util 100% local offline",
+  },
 
   // Sistemas (Capabilities)
   {
