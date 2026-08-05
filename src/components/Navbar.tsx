@@ -11,6 +11,7 @@ import {
   BookOpen,
   Search,
   Video,
+  Clapperboard,
 } from "lucide-react";
 import { SearchGlobal } from "./SearchGlobal";
 import { useSearchState } from "@/hooks/use-search";
@@ -169,6 +170,19 @@ const Navbar = () => {
 
                 <NavigationMenuItem>
                   <Link
+                    to="/downmuvi"
+                    className={cn(
+                      navigationMenuTriggerStyle(),
+                      "bg-transparent hover:bg-white/5 transition-colors flex items-center gap-2",
+                    )}
+                  >
+                    <Clapperboard className="w-4 h-4 text-downmuvi-cyan" />
+                    DownMuVi
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link
                     to="/courses"
                     className={cn(
                       navigationMenuTriggerStyle(),
@@ -278,6 +292,24 @@ const Navbar = () => {
                             </p>
                             <p className="text-xs text-muted-foreground">
                               Grabación y capturas en Windows
+                            </p>
+                          </div>
+                        </Link>
+
+                        <Link
+                          to="/downmuvi"
+                          className="flex items-center gap-4 px-3 py-4 rounded-xl hover:bg-white/5 transition-colors group"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className="p-2 rounded-lg bg-downmuvi-cyan/10 group-hover:bg-downmuvi-cyan/20 transition-colors">
+                            <Clapperboard className="w-5 h-5 text-downmuvi-cyan" />
+                          </div>
+                          <div>
+                            <p className="font-bold text-sm text-foreground">
+                              DownMuVi
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              Hub multimedia con IA local
                             </p>
                           </div>
                         </Link>

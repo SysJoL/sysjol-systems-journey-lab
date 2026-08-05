@@ -143,6 +143,32 @@ const Lab = () => {
         image:
           "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
       },
+      {
+        title: "NutriCalc",
+        description:
+          "Nutrición y composición corporal, calculadas con claridad. Obtén IMC, TMB, TMR y GET, estimación de % grasa (Deurenberg y opcional Yuhasz) y tablas de referencia en un solo flujo pensado para contrastar datos en consulta.",
+        github: "https://github.com/SysJoL/nutri-calc",
+        demo: "https://nutri-calc-sysjol.vercel.app/app.html",
+        tags: ["HTML/CSS", "JavaScript", "PWA", "OMS · ACSM"],
+        image: "/proyectos/nutricalc-app.png",
+      },
+      {
+        title: "Versículos Bíblicos",
+        description:
+          "App web/PWA de meditación bíblica en español e inglés: filtros por categoría, compartir/descargar imagen y fallback local cuando las APIs no responden.",
+        github: "https://github.com/SysJoL/versiculos-biblicos",
+        demo: "https://versiculos-biblicos.onrender.com/",
+        tags: ["Astro", "TypeScript", "API.Bible", "PWA"],
+        image: "/proyectos/versiculos-bblicos.png",
+      },
+      {
+        title: "Compresor PDF",
+        description:
+          "Reduce el tamaño de tus PDF directamente en el navegador: arrastra el archivo, elige el nivel de compresión y descarga el resultado sin subir datos a ningún servidor.",
+        demo: "https://compress-pdf-lac.vercel.app/",
+        tags: ["JavaScript", "PDF.js", "100% local"],
+        image: "/proyectos/compresor-pdf.png",
+      },
     ],
     backend: [
       {

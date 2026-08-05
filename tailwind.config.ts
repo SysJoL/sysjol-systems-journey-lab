@@ -33,6 +33,8 @@ export default {
         "captura-coral": "#eb5757",
         "captura-indigo": "#6366f1",
         "captura-violet": "#a855f7",
+        "downmuvi-cyan": "#22d3ee",
+        "downmuvi-violet": "#8b5cf6",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

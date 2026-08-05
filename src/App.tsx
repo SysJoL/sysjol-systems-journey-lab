@@ -13,6 +13,7 @@ import Systems from "./pages/Systems";
 import Journey from "./pages/Journey";
 import Lab from "./pages/Lab";
 import CapturaAppPage from "./pages/CapturaAppPage";
+import DownMuViPage from "./pages/DownMuViPage";
 
 import TermsOfService from "./pages/TermsOfService";
 import ScrollToTop from "./components/ScrollToTop";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/journey" element={<Journey />} />
           <Route path="/lab" element={<Lab />} />
           <Route path="/capturaapp" element={<CapturaAppPage />} />
+          <Route path="/downmuvi" element={<DownMuViPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -79,6 +79,23 @@ export const searchData: SearchItem[] = [
       "860x560 800x520 splash descargar windows público public capturaapp carpeta salida " +
       "johlevic github.com/Johlevic/captura-app captura-app instalador setup exe",
   },
+  {
+    title: "DownMuVi",
+    description:
+      "Hub multimedia todo-en-uno para Windows: descarga, transcripción IA local, editor con VLC y biblioteca.",
+    category: "Producto",
+    href: "/downmuvi",
+    keywords:
+      "down muvi downmuvi SysJoL-Development SysJoL development 2.3.2 v2.3.2 hub multimedia " +
+      "escritorio windows nativa descargar instalador exe setup Inno Setup customtkinter python " +
+      "yt-dlp ffmpeg youtube facebook instagram tiktok twitter x spotify mp3 wav m4a flac ogg opus " +
+      "360p 720p 1080p calidad descarga download transcripción transcripcion whisper faster-whisper " +
+      "ia local ia offline sin conexión offline editor video timeline vlc libvlc picture-in-picture " +
+      "pip biblioteca librería biblioteca multimedia galería galeria media lab historial chat música musica " +
+      "supabase sincronización sincronizacion cuenta perfil créditos creditos actualizaciones automaticas " +
+      "sysjol pro premium zip play all ffmpeg incluido 394.9 mb 414116930 releases latest " +
+      "github.com/SysJoL/DownMuVi-Releases github.com/SysJoL-Development/DownMuVi",
+  },
 
   // Sistemas (Capabilities)
   {

@@ -88,6 +88,13 @@ const ExploreContent = ({ onSelect }: { onSelect: (href: string) => void }) => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {[
           {
+            title: "DownMuVi",
+            desc: "Hub multimedia con IA local",
+            icon: Monitor,
+            href: "/downmuvi",
+            color: "text-cyan-400",
+          },
+          {
             title: "CapturaApp",
             desc: "Grabación y capturas en Windows",
             icon: Monitor,
@@ -134,6 +141,7 @@ const ExploreContent = ({ onSelect }: { onSelect: (href: string) => void }) => (
       </h3>
       <div className="flex flex-wrap gap-2 text-sm italic">
         {[
+          { name: "DownMuVi", href: "/downmuvi" },
           { name: "CapturaApp", href: "/capturaapp" },
           { name: "Sistemas", href: "/systems" },
           { name: "Estrategia", href: "/journey" },
@@ -280,7 +288,7 @@ const SearchContent = ({
       <div className="border-t border-white/10 bg-background/50 backdrop-blur-md z-20 shrink-0 px-6 md:px-10">
         <CommandInput
           ref={searchInputRef}
-          placeholder="Busca servicios, cursos, CapturaApp, grabación…"
+          placeholder="Busca servicios, cursos, apps, grabación, IA local…"
           value={query}
           onValueChange={onQueryChange}
           className="text-base md:text-sm h-14 md:h-12 border-none outline-none focus:ring-0"
@@ -550,7 +558,7 @@ export const SearchGlobal = ({
             type="search"
             inputMode="search"
             enterKeyHint="search"
-            placeholder="Busca servicios, cursos, CapturaApp, grabación…"
+            placeholder="Busca servicios, cursos, apps, grabación, IA local…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => {
