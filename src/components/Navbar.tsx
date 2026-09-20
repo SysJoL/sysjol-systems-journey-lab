@@ -84,6 +84,27 @@ const Navbar = () => {
     },
   ];
 
+  const products = [
+    {
+      title: "CapturaApp",
+      description: "Grabación y capturas en Windows.",
+      icon: Video,
+      href: "/capturaapp",
+    },
+    {
+      title: "DownMuVi",
+      description: "Hub multimedia con IA local.",
+      icon: Clapperboard,
+      href: "/downmuvi",
+    },
+    {
+      title: "Generador QR",
+      description: "Crea QR desde un enlace.",
+      icon: QrCode,
+      href: "/qr-generator",
+    },
+  ];
+
   return (
     <header
       className={cn(
@@ -158,40 +179,14 @@ const Navbar = () => {
 
                 <NavigationMenuItem>
                   <Link
-                    to="/capturaapp"
+                    to="/lab"
                     className={cn(
                       navigationMenuTriggerStyle(),
                       "bg-transparent hover:bg-white/5 transition-colors flex items-center gap-2",
                     )}
                   >
-                    <Video className="w-4 h-4 text-captura-coral" />
-                    CapturaApp
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link
-                    to="/downmuvi"
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-white/5 transition-colors flex items-center gap-2",
-                    )}
-                  >
-                    <Clapperboard className="w-4 h-4 text-downmuvi-cyan" />
-                    DownMuVi
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link
-                    to="/qr-generator"
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent hover:bg-white/5 transition-colors flex items-center gap-2",
-                    )}
-                  >
-                    <QrCode className="w-4 h-4 text-downmuvi-violet" />
-                    Generador QR
+                    <FlaskConical className="w-4 h-4 text-primary" />
+                    Proyectos
                   </Link>
                 </NavigationMenuItem>
 
@@ -206,6 +201,40 @@ const Navbar = () => {
                     <BookOpen className="w-4 h-4" />
                     Cursos
                   </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent hover:bg-white/5 data-[state=open]:bg-white/5 transition-colors">
+                    Productos
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] bg-card/95 backdrop-blur-xl border border-white/10">
+                      {products.map((product) => (
+                        <li key={product.title}>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={product.href}
+                              className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="p-2 rounded-lg bg-primary/5 group-hover:bg-primary/20 transition-colors">
+                                  <product.icon className="w-5 h-5" />
+                                </div>
+                                <div>
+                                  <div className="text-sm font-bold leading-none mb-1">
+                                    {product.title}
+                                  </div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    {product.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -290,6 +319,24 @@ const Navbar = () => {
                         <div className="h-px bg-white/5 my-4" />
 
                         <p className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-2">
+                          Educación
+                        </p>
+                        <Link
+                          to="/courses"
+                          className="flex items-center gap-4 px-3 py-4 rounded-xl hover:bg-white/5 transition-colors group"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className="p-2 rounded-lg bg-accent/5 group-hover:bg-accent/20 transition-colors">
+                            <BookOpen className="w-5 h-5 text-accent" />
+                          </div>
+                          <p className="font-bold text-sm text-foreground">
+                            Explorar Cursos
+                          </p>
+                        </Link>
+
+                        <div className="h-px bg-white/5 my-4" />
+
+                        <p className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-2">
                           Producto
                         </p>
                         <Link
@@ -344,24 +391,6 @@ const Navbar = () => {
                               Crea QR desde un enlace
                             </p>
                           </div>
-                        </Link>
-
-                        <div className="h-px bg-white/5 my-4" />
-
-                        <p className="px-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                          Educación
-                        </p>
-                        <Link
-                          to="/courses"
-                          className="flex items-center gap-4 px-3 py-4 rounded-xl hover:bg-white/5 transition-colors group"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          <div className="p-2 rounded-lg bg-accent/5 group-hover:bg-accent/20 transition-colors">
-                            <BookOpen className="w-5 h-5 text-accent" />
-                          </div>
-                          <p className="font-bold text-sm text-foreground">
-                            Explorar Cursos
-                          </p>
                         </Link>
                       </nav>
                     </div>

@@ -15,10 +15,18 @@ import {
 } from "@/components/ui/select";
 import { Link } from "react-router-dom";
 import {
-  ArrowLeft,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
   Download,
   Eraser,
   FileImage,
+  Home,
   Link2,
   Lock,
   QrCode,
@@ -131,13 +139,29 @@ const QrGeneratorPage = () => {
       <section className="relative border-b border-white/5 pt-28 pb-14 md:pt-32 md:pb-20">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(34,211,238,0.10),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.12),transparent_45%)]" />
         <div className="container relative z-10 px-4 md:px-6">
-          <Link
-            to="/"
-            className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[#22d3ee]"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Volver al inicio
-          </Link>
+          <div className="flex justify-center mb-8">
+            <Breadcrumb className="bg-background/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-lg">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link
+                      to="/"
+                      className="flex items-center gap-2 hover:text-primary transition-colors"
+                    >
+                      <Home className="w-3.5 h-3.5" />
+                      <span>Inicio</span>
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-primary font-medium">
+                    Generador QR
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
 
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-card/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#22d3ee] backdrop-blur-sm">

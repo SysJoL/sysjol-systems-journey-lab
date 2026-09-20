@@ -1,7 +1,7 @@
 {
-  "name": "SysJoL - Systems Journey Lab",
+  "name": "SysJoL — Automatización y software a medida",
   "short_name": "SysJoL",
-  "description": "Transformación Digital y Sistemas de Alto Rendimiento. Cursos premium de tecnología, automatización e infraestructura cloud.",
+  "description": "Automatización de procesos y generación de código para MYPEs peruanas: n8n, APIs, SUNAT, WhatsApp e IA aplicada.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,29 +10,35 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/favicon.png",
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "categories": ["education", "technology", "productivity"],
+  "categories": ["business", "technology", "productivity"],
   "screenshots": [],
   "shortcuts": [
     {
-      "name": "Cursos",
-      "short_name": "Cursos",
-      "description": "Ver cursos disponibles",
-      "url": "/courses",
+      "name": "Proyectos",
+      "short_name": "Proyectos",
+      "description": "Casos de automatización y software",
+      "url": "/lab",
       "icons": [
         {
-          "src": "/favicon.png",
+          "src": "/icons/icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -40,11 +46,23 @@
     {
       "name": "Sistemas",
       "short_name": "Sistemas",
-      "description": "Infraestructura y arquitectura",
+      "description": "Arquitecturas y automatización",
       "url": "/systems",
       "icons": [
         {
-          "src": "/favicon.png",
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Cursos",
+      "short_name": "Cursos",
+      "description": "Ver cursos disponibles",
+      "url": "/courses",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
           "sizes": "192x192"
         }
       ]

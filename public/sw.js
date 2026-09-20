@@ -1,64 +1,101 @@
 // Service Worker for SysJoL PWA
-const CACHE_NAME = "sysjol-v2";
-const urlsToCache = ["/", "/index.html", "/favicon.png", "/manifest.json"];
+//
+// Estrategia:
+// - Navegaciones (HTML): network-first. El HTML nunca lleva hash en el nombre,
+//   así que si se sirve desde caché el sitio queda "congelado" en el deploy
+//   anterior. Con network-first cada visita trae el index.html nuevo y por ende
+//   los bundles nuevos. Si no hay red, se usa la copia en caché (offline).
+// - /assets/* (JS/CSS con hash de Vite): cache-first, son inmutables.
+// - Todo lo demás (APIs, JSON, imágenes): sin caché del SW, lo maneja el navegador.
+//
+// IMPORTANTE: al cambiar este archivo (o la estrategia), subir CACHE_NAME
+// (sysjol-vN) para que los clientes con el SW viejo migren y borren cachés.
+const CACHE_NAME = "sysjol-v3";
+const PRECACHE_URLS = ["/favicon.png", "/manifest.json"];
 
-// Install event - cache essential files
+// Install: pre-cache solo estáticos que no cambian entre deploys.
+// Ya NO se pre-cachea "/" ni "/index.html" (eso congelaba el home).
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log("Opened cache");
-      return cache.addAll(urlsToCache);
-    }),
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => cache.addAll(PRECACHE_URLS))
+      .catch(() => undefined),
   );
   self.skipWaiting();
 });
 
-// Activate event - clean up old caches
+// Activate: borra cachés de versiones anteriores y toma control.
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log("Deleting old cache:", cacheName);
-            return caches.delete(cacheName);
-          }
-        }),
-      );
-    }),
+    caches
+      .keys()
+      .then((cacheNames) =>
+        Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== CACHE_NAME) {
+              return caches.delete(cacheName);
+            }
+            return undefined;
+          }),
+        ),
+      )
+      .then(() => self.clients.claim()),
   );
-  self.clients.claim();
 });
 
-// Fetch event - serve from cache, fallback to network
 self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Cache hit - return response
-      if (response) {
-        return response;
-      }
+  const { request } = event;
+  if (request.method !== "GET") return;
 
-      return fetch(event.request).then((response) => {
-        // Check if valid response
-        if (!response || response.status !== 200 || response.type !== "basic") {
+  // 1) Navegaciones: red primero, caché solo como respaldo offline.
+  if (request.mode === "navigate") {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           return response;
-        }
+        })
+        .catch(() =>
+          caches
+            .match(request)
+            .then((cached) => cached || caches.match("/index.html")),
+        ),
+    );
+    return;
+  }
 
-        // Clone the response
-        const responseToCache = response.clone();
-
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
-
-        return response;
-      });
-    }),
-  );
+  // 2) Assets con hash de Vite: caché primero (inmutables entre deploys).
+  try {
+    const url = new URL(request.url);
+    if (
+      url.origin === self.location.origin &&
+      url.pathname.startsWith("/assets/")
+    ) {
+      event.respondWith(
+        caches.match(request).then(
+          (cached) =>
+            cached ||
+            fetch(request).then((response) => {
+              if (response && response.status === 200) {
+                const copy = response.clone();
+                caches
+                  .open(CACHE_NAME)
+                  .then((cache) => cache.put(request, copy));
+              }
+              return response;
+            }),
+        ),
+      );
+    }
+  } catch {
+    // URL inválida: deja que el navegador resuelva sin el SW.
+  }
+  // 3) Resto de peticiones: no se interceptan.
 });
 
-// Listen for skip waiting message from client
+// Permite al cliente (UpdatePrompt) activar el SW nuevo de inmediato.
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();

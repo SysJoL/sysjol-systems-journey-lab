@@ -46,12 +46,13 @@ const Courses = () => {
 
           <div className="text-center">
             <h1 className="text-3xl md:text-6xl font-display font-bold mb-6">
-              Catálogo de{" "}
-              <span className="text-gradient">Especializaciones</span>
+              Cursos que te ponen a{" "}
+              <span className="text-gradient">automatizar</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explora nuestra oferta educativa diseñada para transformar tu
-              perfil profesional con tecnología de vanguardia.
+              Formación práctica pensada para el Perú: aprende con proyectos
+              reales —como automatizar tu Excel o tu facturación— con soporte
+              por WhatsApp.
             </p>
           </div>
         </div>

@@ -107,7 +107,7 @@ Para ejecutar este proyecto en tu máquina local:
 1.  **Clonar el repositorio**
 
     ```bash
-    git clone https://github.com/Johlevic/sysjol-systems-journey-lab.git
+    git clone https://github.com/SysJoL/sysjol-systems-journey-lab.git
     cd sysjol-systems-journey-lab
     ```
 

@@ -35,13 +35,16 @@ export const searchData: SearchItem[] = [
   // Páginas
   {
     title: "Inicio",
-    description: "Página principal de SysJoL.",
+    description:
+      "Automatización de procesos y generación de código para MYPEs peruanas.",
     category: "Páginas",
     href: "/",
+    keywords:
+      "automatizar automatización procesos mype perú peru trujillo sunat whatsapp excel software medida misión vision valores empresa",
   },
   {
     title: "Sistemas",
-    description: "Infraestructura, Backend y APIs escalables.",
+    description: "Automatización, backend, APIs e IA aplicada.",
     category: "Páginas",
     href: "/systems",
   },
@@ -53,9 +56,11 @@ export const searchData: SearchItem[] = [
   },
   {
     title: "Lab",
-    description: "Laboratorio de innovación y proyectos experimentales.",
+    description: "Proyectos de software y automatización con resultados.",
     category: "Páginas",
     href: "/lab",
+    keywords:
+      "proyectos portafolio casos automatizar n8n ia resultados whatsapp",
   },
   {
     title: "Cursos",
@@ -77,7 +82,7 @@ export const searchData: SearchItem[] = [
       "screenshot screenshots captura capturas png región region ventana fullscreen " +
       "galería galeria dashboard almacenamiento espacio disco local privacidad sin nube " +
       "860x560 800x520 splash descargar windows público public capturaapp carpeta salida " +
-      "johlevic github.com/Johlevic/captura-app captura-app instalador setup exe",
+      "sysjol github.com/SysJoL/captura-app captura-app instalador setup exe",
   },
   {
     title: "DownMuVi",
@@ -134,6 +139,29 @@ export const searchData: SearchItem[] = [
     description: "PostgreSQL, MongoDB y Redis de alta velocidad.",
     category: "Sistemas",
     href: "/systems",
+  },
+  {
+    title: "Arquitectura API + Automatización",
+    description: "Sistema central con API y n8n: WhatsApp, SUNAT y reportes solos.",
+    category: "Sistemas",
+    href: "/systems",
+    keywords:
+      "arquitectura api automatización n8n whatsapp sunat monolitico monolito modular microservicios eventos colas",
+  },
+  {
+    title: "Patrones de desarrollo",
+    description: "API-first, webhooks, reintentos, capas, roles y monitoreo.",
+    category: "Sistemas",
+    href: "/systems",
+    keywords:
+      "patrones api-first webhooks reintentos capas seguridad roles monitoreo buenas practicas",
+  },
+  {
+    title: "Cómo trabajamos",
+    description: "Descubrimiento, diseño, construcción y puesta en marcha.",
+    category: "Sistemas",
+    href: "/systems",
+    keywords: "proceso metodología descubrimiento diseño construcción despliegue soporte",
   },
 
   // Cursos (From CoursesSection)
@@ -196,6 +224,52 @@ export const searchData: SearchItem[] = [
   {
     title: "LedPantallas Ecommerce",
     description: "Ecommerce optimizado para pantallas LED.",
+    category: "Laboratorio",
+    href: "/lab",
+  },
+  {
+    title: "Libro de Reclamaciones Digital",
+    description: "Reclamos digitales conforme a la norma peruana.",
+    category: "Laboratorio",
+    href: "/lab",
+    keywords: "reclamaciones libro quejas indecopi norma peru",
+  },
+  {
+    title: "Extractor SUNAT XML",
+    description: "Auditoría de facturación electrónica en minutos.",
+    category: "Laboratorio",
+    href: "/lab",
+    keywords: "sunat xml facturación auditoría impuestos contabilidad",
+  },
+  {
+    title: "NutriCalc",
+    description: "IMC, TMB y grasa corporal en un flujo PWA.",
+    category: "Laboratorio",
+    href: "/lab",
+  },
+  {
+    title: "Versículos Bíblicos",
+    description: "Meditación diaria en español e inglés con PWA.",
+    category: "Laboratorio",
+    href: "/lab",
+  },
+  {
+    title: "Compresor PDF",
+    description: "Reduce PDFs 100% local sin subir datos.",
+    category: "Laboratorio",
+    href: "/lab",
+    keywords: "pdf comprimir reducir tamaño local privacidad",
+  },
+  {
+    title: "Currency Exchange API",
+    description: "Conversión de divisas con tasas en vivo.",
+    category: "Laboratorio",
+    href: "/lab",
+    keywords: "divisas dolar tipo cambio microservicios finanzas",
+  },
+  {
+    title: "Amigo Secreto",
+    description: "Sorteo aleatorio sin colisiones.",
     category: "Laboratorio",
     href: "/lab",
   },

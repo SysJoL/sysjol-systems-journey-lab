@@ -1,19 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8VG2N45Z3H"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-8VG2N45Z3H");
-    </script>
+    <!-- Analytics: se inyecta una sola vez vía VITE_GA_MEASUREMENT_ID en src/main.tsx (ver src/lib/analytics.ts). No duplicar aquí. -->
 
     <meta charset="UTF-8" />
     <meta
@@ -21,34 +9,62 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
     />
     <title>
-      SysJoL — Systems • Journey • Lab | Automatización & Transformación Digital
+      SysJoL — Automatización de procesos y software a medida en Perú
     </title>
     <meta
       name="description"
-      content="SysJoL es un laboratorio de sistemas y automatización que guía a las empresas en su viaje hacia soluciones inteligentes y escalables. Backend moderno, APIs escalables e IA aplicada."
+      content="Automatizamos MYPEs peruanas: flujos con n8n, APIs, facturación SUNAT, ventas por WhatsApp e IA aplicada. Software a medida desde Trujillo para todo el Perú."
     />
     <meta
       name="keywords"
-      content="sistemas, automatización, transformación digital, APIs, inteligencia artificial, backend, infraestructura"
+      content="automatización, mype perú, sunat, facturación electrónica, n8n, apis, software a medida, transformación digital, inteligencia artificial, trujillo"
     />
     <link rel="canonical" href="https://sysjol.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="SysJoL — Systems • Journey • Lab" />
+    <meta property="og:url" content="https://sysjol.com" />
+    <meta property="og:title" content="SysJoL — Automatización de procesos y software a medida en Perú" />
     <meta
       property="og:description"
-      content="Laboratorio de sistemas y automatización. Soluciones inteligentes y escalables."
+      content="Convertimos Excel manual, WhatsApp saturado y papeles de SUNAT en sistemas automáticos para MYPEs peruanas."
     />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content="https://sysjol.com/favicon.png" />
+    <meta property="og:locale" content="es_PE" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SysJoL — Systems • Journey • Lab" />
+    <meta name="twitter:title" content="SysJoL — Automatización de procesos y software a medida en Perú" />
     <meta
       name="twitter:description"
-      content="Laboratorio de sistemas y automatización. Soluciones inteligentes y escalables."
+      content="Convertimos Excel manual, WhatsApp saturado y papeles de SUNAT en sistemas automáticos para MYPEs peruanas."
     />
+    <meta name="twitter:image" content="https://sysjol.com/favicon.png" />
+
+    <!-- Datos estructurados: Organización -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SysJoL",
+        "url": "https://sysjol.com",
+        "logo": "https://sysjol.com/favicon.png",
+        "description": "Automatización de procesos y generación de código para MYPEs peruanas.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Trujillo",
+          "addressRegion": "La Libertad",
+          "addressCountry": "PE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+51 980 609 176",
+          "contactType": "sales",
+          "availableLanguage": "es"
+        },
+        "sameAs": ["https://github.com/SysJoL"]
+      }
+    </script>
 
     <!-- PWA Configuration -->
     <meta name="theme-color" content="#8b5cf6" />

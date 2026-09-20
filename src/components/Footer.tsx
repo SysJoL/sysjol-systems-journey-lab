@@ -170,7 +170,7 @@ const Footer = () => {
                 },
                 {
                   icon: FaGithub,
-                  href: "https://github.com/Johlevic?tab=repositories",
+                  href: "https://github.com/SysJoL?tab=repositories",
                   label: "GitHub",
                   color: "hover:text-white hover:border-white/30",
                 },

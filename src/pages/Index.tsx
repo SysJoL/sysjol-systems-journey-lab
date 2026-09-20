@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import MissionVisionValues from "@/components/MissionVisionValues";
 import PillarsSection from "@/components/PillarsSection";
-import CoursesSection from "@/components/CoursesSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
@@ -63,8 +64,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <MissionVisionValues />
       <PillarsSection />
-      <CoursesSection />
+      <ProjectsSection />
       <CTASection />
       <Footer />
     </main>

@@ -36,14 +36,14 @@ export const CAPTURA_APP_SLIDES = [
 ] as const;
 
 /** Repositorio oficial (código, Issues, README). */
-export const CAPTURA_APP_REPO_URL = "https://github.com/Johlevic/captura-app";
+export const CAPTURA_APP_REPO_URL = "https://github.com/SysJoL/captura-app";
 
 /**
  * Instalador publicado en la rama `main` (descarga directa del `.exe`).
- * Vista en GitHub: https://github.com/Johlevic/captura-app/blob/main/CapturaApp_0.1.0_x64-setup.exe
+ * Vista en GitHub: https://github.com/SysJoL/captura-app/blob/main/CapturaApp_0.1.0_x64-setup.exe
  */
 export const CAPTURA_APP_DOWNLOAD_URL =
-  "https://raw.githubusercontent.com/Johlevic/captura-app/main/CapturaApp_0.1.0_x64-setup.exe";
+  "https://raw.githubusercontent.com/SysJoL/captura-app/main/CapturaApp_0.1.0_x64-setup.exe";
 
 /**
  * JSON estático en `public/` → en producción: `https://sysjol.onrender.com/capturaapp-latest.json`

@@ -1,5 +1,6 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ImageWithSkeleton } from "./ImageWithSkeleton";
 import {
@@ -10,7 +11,26 @@ import {
   CardTitle,
 } from "./ui/card";
 
-const courses = [
+const courses: {
+  title: string;
+  description: string;
+  logo: string;
+  color: string;
+  border: string;
+  isFilterable?: boolean;
+  href?: string;
+  hrefLabel?: string;
+}[] = [
+  {
+    title: "Python Profesional",
+    description:
+      "Certificación intensiva de 4 semanas: automatización, APIs y proyectos reales con acompañamiento.",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    color: "group-hover:shadow-[0_0_30px_-5px_rgba(55,118,171,0.4)]",
+    border: "group-hover:border-[#3776AB]/50",
+    href: "/python-course",
+    hrefLabel: "Ver temario e inscribirme",
+  },
   {
     title: "Microsoft Excel Avanzado",
     description:
@@ -112,7 +132,18 @@ const CoursesSection = () => {
                   {course.description}
                 </p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex flex-col gap-3">
+                {course.href && (
+                  <Button
+                    className="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white border-primary/20 transition-all duration-300"
+                    asChild
+                  >
+                    <Link to={course.href}>
+                      {course.hrefLabel ?? "Ver curso"}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                )}
                 <Button
                   onClick={() => handleContact(course.title)}
                   className="w-full bg-[#25D366]/10 hover:bg-[#25D366] text-[#25D366] hover:text-white border-[#25D366]/20 transition-all duration-300 group/btn"

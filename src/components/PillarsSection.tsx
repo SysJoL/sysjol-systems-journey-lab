@@ -7,7 +7,7 @@ const pillars = [
     icon: Server,
     title: "Systems",
     description:
-      "Diseñamos y construimos infraestructura sólida, backend moderno, APIs escalables e inteligencia artificial aplicada.",
+      "Automatización de procesos, backend moderno, APIs e IA aplicada: convertimos tareas manuales en sistemas que trabajan solos.",
     gradient: "from-primary to-primary/50",
     href: "/systems",
   },
@@ -15,7 +15,7 @@ const pillars = [
     icon: Compass,
     title: "Journey",
     description:
-      "Acompañamos a las empresas en su transformación digital, desde la idea hasta la automatización en producción.",
+      "Acompañamos tu transformación digital desde la idea hasta la automatización en producción, con foco en ROI.",
     gradient: "from-accent to-accent/50",
     href: "/journey",
   },
@@ -23,7 +23,7 @@ const pillars = [
     icon: FlaskConical,
     title: "Lab",
     description:
-      "Un espacio de innovación continua donde experimentamos, automatizamos y optimizamos procesos con tecnología de vanguardia.",
+      "Nuestro laboratorio de desarrollo de software: experimentos, automatizaciones y proyectos reales con tecnología de vanguardia.",
     gradient: "from-primary via-accent to-primary",
     href: "/lab",
   },

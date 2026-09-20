@@ -81,7 +81,7 @@ const Journey = () => {
     {
       title: "Descubrimiento",
       description:
-        "Analizamos tu ADN empresarial para identificar oportunidades críticas de mejora y digitalización.",
+        "Mapeamos tus procesos para encontrar qué tareas manuales te quitan más horas y dinero: Excel, WhatsApp, SUNAT.",
       icon: Search,
       color: "text-blue-500",
       bg: "bg-blue-500/10",
@@ -89,7 +89,7 @@ const Journey = () => {
     {
       title: "Estrategia",
       description:
-        "Diseñamos un mapa de ruta personalizado, seleccionando las tecnologías que maximicen tu ROI.",
+        "Diseñamos un plan por etapas según tu presupuesto, empezando por lo que más te duele y más retorno da.",
       icon: Target,
       color: "text-purple-500",
       bg: "bg-purple-500/10",
@@ -97,7 +97,7 @@ const Journey = () => {
     {
       title: "Ejecución",
       description:
-        "Nuestros equipos implementan soluciones ágiles con un enfoque en calidad y velocidad de entrega.",
+        "Construimos automatizaciones y sistemas que puedes probar cada semana, sin paralizar tu operación.",
       icon: Rocket,
       color: "text-accent",
       bg: "bg-accent/10",
@@ -105,7 +105,7 @@ const Journey = () => {
     {
       title: "Crecimiento",
       description:
-        "Monitoreamos, optimizamos y escalamos tus sistemas para asegurar un éxito sostenible en el tiempo.",
+        "Monitoreamos, ajustamos y agregamos nuevas automatizaciones para que el sistema crezca con tu negocio.",
       icon: TrendingUp,
       color: "text-emerald-500",
       bg: "bg-emerald-500/10",
@@ -172,12 +172,12 @@ const Journey = () => {
 
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-7xl lg:text-8xl font-display font-bold mb-8 animate-fade-up">
-              Tu Viaje a la{" "}
-              <span className="text-gradient-purple">Excelencia</span>
+              Tu camino a la{" "}
+              <span className="text-gradient-purple">automatización</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed animate-fade-up [animation-delay:200ms]">
-              Te acompañamos en cada etapa de tu transformación digital, desde
-              la visión estratégica hasta el éxito operativo.
+              Acompañamos a MYPEs y emprendedores peruanos desde el caos del
+              WhatsApp y el Excel hasta una operación automática que vende sola.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up [animation-delay:400ms]">
               <Button
@@ -245,9 +245,9 @@ const Journey = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed italic">
                 No solo entregamos software; nos convertimos en tus socios
-                tecnológicos. Nuestros programadores trabajan codo a codo
-                contigo para entender tus desafíos y convertirlos en ventajas
-                competitivas.
+                tecnológicos. Desde Trujillo para todo el Perú: hablamos tu
+                idioma, por WhatsApp y sin tecnicismos, hasta convertir tus
+                desafíos en ventajas competitivas.
               </p>
               <ul className="space-y-4">
                 {[
@@ -278,8 +278,8 @@ const Journey = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent">
                     <ImageWithSkeleton
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-                      alt="Dev Lead"
+                      src="/lead/IMG_20230513_120825.jpg"
+                      alt="Developer Lead SysJoL"
                       className="w-full h-full object-cover"
                     />
                   </div>
