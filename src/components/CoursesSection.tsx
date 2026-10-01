@@ -87,7 +87,7 @@ const CoursesSection = () => {
     const message = encodeURIComponent(
       `Hola, estoy interesado en recibir más información sobre el curso de ${courseTitle}.`,
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
 
   return (

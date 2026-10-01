@@ -8,7 +8,7 @@ const HeroSection = () => {
     const message = encodeURIComponent(
       "Hola SysJoL, soy de Perú y quiero automatizar los procesos de mi negocio. ¿Conversamos?",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
 
   return (

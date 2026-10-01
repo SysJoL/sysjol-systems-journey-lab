@@ -8,7 +8,7 @@ const CTASection = () => {
     const message = encodeURIComponent(
       "Hola, me gustaría conversar sobre cómo pueden ayudarme con mis proyectos de automatización y sistemas.",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
 
   return (

@@ -262,14 +262,14 @@ const Lab = () => {
     const message = encodeURIComponent(
       "Hola, vi tus proyectos en el Lab de SysJoL y me gustaría conversar sobre una posible colaboración.",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
 
   const handleProjectContact = (title: string) => {
     const message = encodeURIComponent(
       `Hola, vi el proyecto "${title}" en el Lab de SysJoL y quiero algo similar para mi negocio. ¿Conversamos?`,
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
   if (isLoading) {
     return (

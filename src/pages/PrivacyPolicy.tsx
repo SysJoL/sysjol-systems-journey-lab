@@ -181,7 +181,7 @@ const PrivacyPolicy = () => {
                   Implementamos medidas de seguridad técnicas y organizativas
                   para proteger sus datos contra el acceso no autorizado. Si
                   tiene dudas sobre estas políticas, puede escribirnos a{" "}
-                  <strong>sysjol@outlook.es</strong>.
+                  <strong>sysjol024@gmail.com</strong>.
                 </p>
               </section>
 

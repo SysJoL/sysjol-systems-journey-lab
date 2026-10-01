@@ -158,13 +158,13 @@ const Footer = () => {
               {[
                 {
                   icon: FaWhatsapp,
-                  href: "https://wa.me/51980609176",
+                  href: "https://wa.me/51924150790",
                   label: "WhatsApp",
                   color: "hover:text-[#25D366] hover:border-[#25D366]/30",
                 },
                 {
                   icon: Mail,
-                  href: "mailto:sysjol@outlook.es",
+                  href: "mailto:sysjol024@gmail.com",
                   label: "Email",
                   color: "hover:text-[#0078D4] hover:border-[#0078D4]/30",
                 },
@@ -233,13 +233,13 @@ const Footer = () => {
               <li className="flex gap-4">
                 <Mail className="w-6 h-6 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm italic">
-                  sysjol@outlook.es
+                  sysjol024@gmail.com
                 </span>
               </li>
               <li className="flex gap-4">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm italic">
-                  +51 980 609 176
+                  +51 924 150 790
                 </span>
               </li>
             </ul>
@@ -301,13 +301,13 @@ const Footer = () => {
                     <li className="flex gap-4">
                       <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-muted-foreground text-sm italic">
-                        sysjol@outlook.es
+                        sysjol024@gmail.com
                       </span>
                     </li>
                     <li className="flex gap-4">
                       <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                       <span className="text-muted-foreground text-sm italic">
-                        +51 980 609 176
+                        +51 924 150 790
                       </span>
                     </li>
                   </ul>

@@ -289,7 +289,7 @@ const PythonCourse = () => {
         {
           to_name: values.name,
           to_email: values.email,
-          reply_to: "sysjol@gmail.com",
+          reply_to: "sysjol024@gmail.com",
           "g-recaptcha-response": recaptchaValue,
         },
         publicKey,

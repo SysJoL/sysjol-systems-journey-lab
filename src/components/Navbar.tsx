@@ -60,7 +60,7 @@ const Navbar = () => {
     const message = encodeURIComponent(
       "Hola SysJoL, me gustaría solicitar información sobre sus servicios y asesoría tecnológica.",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
 
   const pillars = [

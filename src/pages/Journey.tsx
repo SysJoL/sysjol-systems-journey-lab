@@ -116,7 +116,7 @@ const Journey = () => {
     const message = encodeURIComponent(
       "Hola, me gustaría iniciar mi 'Journey' de transformación digital con SysJoL.",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
   if (isLoading) {
     return (

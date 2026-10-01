@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingButtons from "./components/FloatingButtons";
 import InstallPrompt from "./components/InstallPrompt";
 import { OfflineIndicator } from "./components/OfflineIndicator";
 import { UpdatePrompt } from "./components/UpdatePrompt";
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        <FloatingButtons />
         <InstallPrompt />
       </BrowserRouter>
     </TooltipProvider>

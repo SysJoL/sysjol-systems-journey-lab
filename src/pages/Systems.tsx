@@ -237,7 +237,7 @@ const Systems = () => {
     const message = encodeURIComponent(
       "Hola, me gustaría conocer más sobre sus servicios de Systems (Sistemas, Backend e Infraestructura).",
     );
-    window.open(`https://wa.me/51980609176?text=${message}`, "_blank");
+    window.open(`https://wa.me/51924150790?text=${message}`, "_blank");
   };
   if (isLoading) {
     return (
