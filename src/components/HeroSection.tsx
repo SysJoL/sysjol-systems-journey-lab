@@ -70,16 +70,12 @@ const HeroSection = () => {
                   </h1>
                   <p className="max-w-xl text-base font-light leading-relaxed text-muted-foreground min-[420px]:text-lg md:text-xl">
                     En <strong className="font-semibold text-foreground">SysJoL</strong>,
-                    desde Trujillo para todo el Perú, convertimos el Excel
-                    manual, el WhatsApp saturado y los papeles de SUNAT en
-                    sistemas automáticos: facturación electrónica, control de
-                    ventas e inventario, reportes y atención al cliente con IA.
+                    convertimos el Excel manual, WhatsApp saturado y papeles de SUNAT
+                    en sistemas automáticos: facturación, ventas e inventario.
                   </p>
                   <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                    Pensado para MYPEs y emprendedores peruanos: poco personal,
-                    mucha operación. Te dejamos flujos con n8n, APIs e
-                    integraciones que ahorran horas, evitan multas y te permiten
-                    vender más sin contratar más.
+                    Diseñado para MYPEs: flujos con n8n, APIs e integraciones que
+                    ahorran horas y evitan multas.
                   </p>
                 </div>
 
@@ -182,7 +178,11 @@ const HeroSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-4 font-mono text-xs leading-relaxed text-primary/90">
+                  <div className="flex items-center gap-3 mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-4 font-mono text-xs leading-relaxed text-primary/90">
+                    <span className="text-primary">7</span>
+                    <span className="align-baseline">Proyectos en el Lab</span>
+                  </div>
+                  <div className="mt-2 rounded-2xl border border-primary/20 bg-primary/5 p-4 font-mono text-xs leading-relaxed text-primary/90">
                     sysjol.automatizar() → {"{"} horas_recuperadas, cero_errores,
                     deploy_continuo {"}"}
                   </div>
